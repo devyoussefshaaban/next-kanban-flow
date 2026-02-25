@@ -1,3 +1,5 @@
+"use client"
+
 import { create } from "zustand"
 import { Task, Column, TaskPriority } from "@/features/kanban/types/Task"
 

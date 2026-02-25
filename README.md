@@ -20,6 +20,7 @@ Kanbanic is a simple and modern Kanban board application.
 - Tailwind CSS
 - TypeScript
 - Material UI
+- DnD Kit (https://dndkit.com/)
 - Zustand
 - React Query
 - Axios

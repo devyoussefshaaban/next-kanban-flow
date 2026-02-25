@@ -1,4 +1,4 @@
-import { Card, CardActions, CardContent, IconButton, Typography, Box, Chip } from "@mui/material"
+import { Card, CardContent, IconButton, Typography, Box, Chip } from "@mui/material"
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Task, TaskPriority } from "../types/Task"

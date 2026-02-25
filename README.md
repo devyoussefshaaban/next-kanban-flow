@@ -8,10 +8,10 @@ Kanbanic is a simple and modern Kanban board application.
 
 ## Features
 
-- Drag and drop cards
-- Add and delete cards
-- Add and delete columns
-- Add and delete boards
+- Drag and Drop Tasks
+- Add Tasks
+- Edit Tasks
+- Delete Tasks
 - Responsive design
 
 ## Tech Stack

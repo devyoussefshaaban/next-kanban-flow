@@ -1,0 +1,18 @@
+{
+    "tasks": [
+        {
+            "id": "1",
+            "title": "a title",
+            "description": "a description",
+            "column": "backlog",
+            "priority": "low"
+        },
+        {
+            "id": "2",
+            "title": "another title",
+            "description": "another description",
+            "column": "in_progress",
+            "priority": "medium"
+        }
+    ]
+}

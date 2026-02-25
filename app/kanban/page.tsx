@@ -4,6 +4,7 @@ import { Column as ColumnComponent } from "@/features/kanban/components/Column";
 import { Column, Task } from "@/features/kanban/types/Task";
 import { useQuery } from "@tanstack/react-query";
 import { fetchTasks } from "@/lib/api";
+import { Box, Grid, Skeleton } from "@mui/material";
 
 export default function KanbanPage() {
 
@@ -13,7 +14,15 @@ export default function KanbanPage() {
     })
 
     if (isLoading) {
-        return <div>Loading...</div>
+        return <Grid container spacing={2}>
+            {Array.from(new Array(4)).map((_, index) => (
+                <Grid size={{ xs: 12, md: 6, lg: 3 }}>
+                    <Box key={index} sx={{ width: 300, marginRight: 0.5, my: 5 }}>
+                        <Skeleton variant="rectangular" sx={{ width: "100%", height: 300 }} />
+                    </Box>
+                </Grid>
+            ))}
+        </Grid>
     }
 
     if (error) {
@@ -25,27 +34,36 @@ export default function KanbanPage() {
     }
 
     return (
-        <div className="flex gap-4">
-            <ColumnComponent
-                column={Column.Backlog}
-                title="Backlog"
-                tasks={getColumnTasks(Column.Backlog)}
-            />
-            <ColumnComponent
-                column={Column.InProgress}
-                title="In Progress"
-                tasks={getColumnTasks(Column.InProgress)}
-            />
-            <ColumnComponent
-                column={Column.Review}
-                title="Review"
-                tasks={getColumnTasks(Column.Review)}
-            />
-            <ColumnComponent
-                column={Column.Done}
-                title="Done"
-                tasks={getColumnTasks(Column.Done)}
-            />
-        </div>
+        <Grid container spacing={2}>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
+                <ColumnComponent
+                    column={Column.Backlog}
+                    title="Backlog"
+                    tasks={getColumnTasks(Column.Backlog)}
+                />
+            </Grid>
+
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
+                <ColumnComponent
+                    column={Column.InProgress}
+                    title="In Progress"
+                    tasks={getColumnTasks(Column.InProgress)}
+                />
+            </Grid>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
+                <ColumnComponent
+                    column={Column.Review}
+                    title="Review"
+                    tasks={getColumnTasks(Column.Review)}
+                />
+            </Grid>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }}>
+                <ColumnComponent
+                    column={Column.Done}
+                    title="Done"
+                    tasks={getColumnTasks(Column.Done)}
+                />
+            </Grid>
+        </Grid>
     )
 }

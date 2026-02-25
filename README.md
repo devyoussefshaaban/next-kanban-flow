@@ -4,7 +4,7 @@ Kanbanic is a simple and modern Kanban board application.
 
 ## Live Demo
 
-[Live Demo](https://kanbanic.netlify.app/)
+[Kanbanic | Board Craft](https://kanbanic.netlify.app/)
 
 ## Features
 
